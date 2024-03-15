@@ -1,6 +1,6 @@
-name: provider-xyz-native
+name: provider-intersight-native
 runtime: python
 plugins:
   providers:
-    - name: xyz
+    - name: intersight
       path: ../../bin

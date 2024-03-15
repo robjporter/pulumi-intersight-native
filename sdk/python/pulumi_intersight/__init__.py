@@ -11,11 +11,11 @@ _utilities.register(
     resource_modules="""
 [
  {
-  "pkg": "xyz",
+  "pkg": "intersight",
   "mod": "index",
-  "fqn": "pulumi_xyz",
+  "fqn": "pulumi_intersight",
   "classes": {
-   "xyz:index:Random": "Random"
+   "intersight:index:Random": "Random"
   }
  }
 ]
@@ -23,9 +23,9 @@ _utilities.register(
     resource_packages="""
 [
  {
-  "pkg": "xyz",
-  "token": "pulumi:providers:xyz",
-  "fqn": "pulumi_xyz",
+  "pkg": "intersight",
+  "token": "pulumi:providers:intersight",
+  "fqn": "pulumi_intersight",
   "class": "Provider"
  }
 ]
