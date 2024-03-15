@@ -18,7 +18,7 @@ jobs:
       image: docker://ghcr.io/pulumi/devcontainer:latest
       options: --user root
     permissions:
-      contents: read
+      contents: write
       packages: read
       actions: read
     steps:
@@ -32,7 +32,9 @@ jobs:
       name: Unshallow clone for tags
       id: tags
       run: |
+        git config --global --add safe.directory /__w/pulumi-intersight-native/pulumi-intersight-native
         mkdir /__w/pulumi-provider-boilerplate
+        sudo chown -R $(whoami) /__w/pulumi-provider-boilerplate/
         mkdir /__w/pulumi-provider-boilerplate/pulumi-provider-boilerplate
         sudo chown -R $(whoami) /__w/pulumi-provider-boilerplate/pulumi-provider-boilerplate
         git config --global --add safe.directory /__w/pulumi-provider-boilerplate/pulumi-provider-boilerplate
